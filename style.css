@@ -1,8 +1,38 @@
 :root {
-    --background: #222222;
+    --background: #2E2E2E;
     --text: #f5f5f5;
     --card-front-border: #f5f5f5;
 }
+
+
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+}
+
+
+/* =========================
+   MAIN PAGE CONTAINER
+   ========================= */
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
 
 .menu {
     min-height: 100vh;
@@ -12,16 +42,96 @@
     align-items: center;
 }
 
-.game-info {
-    width: 250px;
-    margin: 0 auto;
+
+/* =========================
+   GAME PAGE
+   ========================= */
+
+/* Top section containing boxart + game information */
+
+.game-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
-.video {
-    text-align: center;
-    margin: 20px auto;
+
+/* General box styling */
+
+.box {
+    background: #383838;
+    border: 1px solid #505050;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
+
+/* Game boxart */
+
+.game-cover {
+    text-align: center;
+}
+
+.game-cover img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.game-site {
+    text-align: center;
+}
+
+/* Game information */
+
+.game-info {
+    width: auto;
+    margin: 0;
+    text-align: left;
+}
+
+
+/* =========================
+   RESOURCE BOXES
+   ========================= */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+
+/* =========================
+   GUIDE BOXES
+   ========================= */
+
+.guide-box {
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: #4db8ff;
+}
+
+a:hover {
+    color: #80ccff;
+}
+
+
+/* =========================
+   START GAME BUTTON
+   ========================= */
 
 #start-game {
     padding: 15px 40px;
@@ -34,13 +144,10 @@
     color: var(--text);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: var(--background);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-}
+
+/* =========================
+   BOXART GRID
+   ========================= */
 
 #boxarts {
     display: grid;
@@ -48,6 +155,11 @@ body {
     gap: 50px;
     justify-content: center;
 }
+
+
+/* =========================
+   FLIP CARDS
+   ========================= */
 
 .card {
     width: 250px;
@@ -65,12 +177,15 @@ body {
     transform-style: preserve-3d;
 }
 
-.card-front{
+.card-front {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
 }
+
+
+/* Boxart images */
 
 .card-front img {
     width: 100%;
